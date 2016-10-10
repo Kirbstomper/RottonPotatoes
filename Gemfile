@@ -32,7 +32,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# use Haml for templates
+gem 'haml'
+
+
+
 group :development, :test do
+  # use Ruby debugger
+  #gem 'debugger'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
