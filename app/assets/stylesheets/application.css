@@ -67,10 +67,13 @@ table#movies th, table#movies td {
   text-align: left;
 }
 #notice, #warning {
+  color: red;
   background: rosybrown;
+  text-align: center;
   margin: 1em 0;
   padding: 4px;
 }
+
 form label {
   display: block;
   line-height: 25px;
