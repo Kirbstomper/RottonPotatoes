@@ -3,12 +3,16 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
   end
- 
+  
   def create
     #@movie = Movie.create!(params[:movie]) #old way
     @movie = Movie.create!(movie_params)  # new way
     flash[:notice] = "#{@movie.title} was successfully created."
     redirect_to movies_path
+  end
+  
+  def edit
+    @movie = Movie.find params[:id]
   end
   
   def update
@@ -18,7 +22,14 @@ class MoviesController < ApplicationController
     flash[:notice] = "#{@movie.title} was successfully updated."
     redirect_to movie_path(@movie)
   end
-
+  
+  def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+    flash[:notice] = "Movie '#{@movie.title}]' deleted."
+    redirect_to movies_path
+    
+  end
  
   def show
     id = params[:id] # retrieve movie ID from URI route
@@ -28,6 +39,7 @@ class MoviesController < ApplicationController
   def new
     # defaut: render 'new' templates
   end
+  
   #MAKE SURE THIS ENTIRE BLOCK IS LAST
    private
   def movie_params
