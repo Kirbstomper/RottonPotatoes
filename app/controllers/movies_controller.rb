@@ -11,7 +11,9 @@ class MoviesController < ApplicationController
     @movie = Movie.find(id) # look up movie by unique ID
    # will render app/views/movies/show.html.haml by default
   end
-  
+  def new
+    # defaut: render 'new' templates
+  end
   #MAKE SURE THIS ENTIRE BLOCK IS LAST
    private
   def movie_params
