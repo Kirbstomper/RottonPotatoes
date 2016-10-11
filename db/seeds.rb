@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Seed the RottenPotatoes DB with some movies.
+
 more_movies = [
   {:title => 'Aladdin', :rating => 'G',
     :release_date => '25-Nov-1992'},
@@ -17,7 +18,7 @@ more_movies = [
   {:title => 'Raiders of the Lost Ark', :rating => 'PG',
     :release_date => '12-Jun-1981'}
 ]
- 
+
 more_movies.each do |movie|
   Movie.create!(movie)
 end

@@ -35,8 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # use Haml for templates
 gem 'haml'
 
-
-
+#used to access attr_accessible
+gem 'protected_attributes'
 group :development, :test do
   # use Ruby debugger
   #gem 'debugger'
